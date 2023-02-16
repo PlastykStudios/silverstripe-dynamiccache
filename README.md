@@ -31,7 +31,7 @@ administration level.
 Whenever a page is published the entire cache is cleared for the sake of robustness.
 
 This module will allow individual pages to opt-out of caching by specifying certain headers,
-and will ignore caching on ajax pages or direct requests to controllers (including 
+and will ignore caching on ajax pages or direct requests to controllers (including
 form submissions) by checking for any url-segments that start with an uppercase letter.
 
 ## Installation Instructions
@@ -39,7 +39,7 @@ form submissions) by checking for any url-segments that start with an uppercase 
  * Either extract the module into the dynamiccache folder, or install using composer
 
 ```bash
-composer require "tractorcow/silverstripe-dynamiccache" "dev-ss4-upgrade"
+composer require "tractorcow/silverstripe-dynamiccache" "dev-master"
 ```
 
 ## Configuration options
@@ -58,7 +58,7 @@ See [dynamiccache.yml](_config/dynamiccache.yml) for the list of configurable op
  * responseHeader - (null|string) Header prefix to use for reporting cache results
  * optInURL - (null|string) If caching should be limited only to specified urls
    set the regular expression here which will be used to match those urls
- * optOutURL - (null|string) If caching should be disabled for specified urls 
+ * optOutURL - (null|string) If caching should be disabled for specified urls
    set the regular expression here which will be used to match those urls
    E.g. '/(^\/admin)|(\/[A-Z])/'
  * segmentHostname - (boolean) Determine if caching should be separated for
@@ -66,7 +66,7 @@ See [dynamiccache.yml](_config/dynamiccache.yml) for the list of configurable op
    content for different hostname, but still uses the same backend, such as the
    subsites module
  * enableAjax - (boolean) Determine if caching should be enabled during ajax
- * cacheDir - (string) Directory where file-based caches are stored 
+ * cacheDir - (string) Directory where file-based caches are stored
    (either absolute, or relative to TEMP_FOLDER).
    Allows usage of %BASE_PATH% and %ASSETS_PATH% placeholders.
    Please ensure that the folder is either located outside of the webroot, or appropriately secured.
